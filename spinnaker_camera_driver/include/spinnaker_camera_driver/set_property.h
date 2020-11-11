@@ -36,6 +36,7 @@ namespace spinnaker_camera_driver
 inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string& property_name,
                         const std::string& entry_name)
 {
+#if (0)
   // *** NOTES ***
   // Enumeration nodes are slightly more complicated to set than other
   // nodes. This is because setting an enumeration node requires working
@@ -114,11 +115,13 @@ inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string
                     << static_cast<Spinnaker::GenApi::CStringPtr>(node_map->GetNode("DeviceID"))->GetValue()
                     << ") Enumeration " << property_name << " not available.");
   }
+#endif
   return false;
 }
 
 inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string& property_name, const float& value)
 {
+#if (0)
   Spinnaker::GenApi::CFloatPtr floatPtr = node_map->GetNode(property_name.c_str());
 
   if (!Spinnaker::GenApi::IsImplemented(floatPtr))
@@ -156,11 +159,13 @@ inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string
                     << static_cast<Spinnaker::GenApi::CStringPtr>(node_map->GetNode("DeviceID"))->GetValue()
                     << ") Feature " << property_name << " not available.");
   }
+#endif
   return false;
 }
 
 inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string& property_name, const bool& value)
 {
+#if (0)
   Spinnaker::GenApi::CBooleanPtr boolPtr = node_map->GetNode(property_name.c_str());
   if (!Spinnaker::GenApi::IsImplemented(boolPtr))
   {
@@ -192,11 +197,13 @@ inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string
                     << static_cast<Spinnaker::GenApi::CStringPtr>(node_map->GetNode("DeviceID"))->GetValue()
                     << ") Feature " << property_name << " not available.");
   }
+#endif
   return false;
 }
 
 inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string& property_name, const int& value)
 {
+#if (0)
   Spinnaker::GenApi::CIntegerPtr intPtr = node_map->GetNode(property_name.c_str());
   if (!Spinnaker::GenApi::IsImplemented(intPtr))
   {
@@ -233,6 +240,7 @@ inline bool setProperty(Spinnaker::GenApi::INodeMap* node_map, const std::string
                     << static_cast<Spinnaker::GenApi::CStringPtr>(node_map->GetNode("DeviceID"))->GetValue()
                     << ") Feature " << property_name << " not available.");
   }
+#endif
   return false;
 }
 
